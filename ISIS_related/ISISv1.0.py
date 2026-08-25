@@ -1,11 +1,16 @@
 def talk_to_jarvis(mensaje):
-    url = "http://localhost:11434/api/generate"
+
+    import serial
+    import time
     import requests
+    url = "http://localhost:11434/api/generate"
     system_prompt="""You are ISIS, 
     a personal AI assistant design to help with: Arduino, Robotics, Math and coding
     -You talk in a casual but technical language
+    -Make questions if needed for a complete anwser
+    a personal AI assistant design to help with: Arduino, Robotics, Math and coding
+    -You talk in a casual but technical language
     -Make questions if needed for a complete anwser """
-
 
 
     data = {
@@ -19,14 +24,14 @@ def talk_to_jarvis(mensaje):
 
     return anwser_text
 
-print("---Jarvis Prototipe---")
+print("---ISIS v1.0---")
 print("Write `exit` to finish the sesion\n")
 
 while True:
     my_message = input("Yo: ")
 
     if my_message.lower() == "exit":
-        print("Jarvis is at your service")
+        print("ISIS is at your command")
         break
     anwser= talk_to_jarvis(my_message)
-    print(f"Jarvis: {anwser}\n")
+    print(f"ISIS: {anwser}\n")
