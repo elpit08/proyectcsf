@@ -1,4 +1,4 @@
-def talk_to_jarvis(mensaje):
+def talk_to_ISIS(mensaje):
 
     import serial
     import time
@@ -33,5 +33,5 @@ while True:
     if my_message.lower() == "exit":
         print("ISIS is at your command")
         break
-    anwser= talk_to_jarvis(my_message)
+    anwser= talk_to_ISIS(my_message)
     print(f"ISIS: {anwser}\n")
